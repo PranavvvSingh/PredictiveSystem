@@ -16,7 +16,7 @@ if choice=="Heart Disease Predictor":
     ########################### TAKING MANUAL INPUTS ############################################
     s,a=st.columns([1,3])
     with s:sex=st.selectbox("Sex: ",("(1)Male","(0)Female"),index=1)
-    if sex is "(1)Male": sex=1
+    if sex=="(1)Male": sex=1
     else: sex=0
     with a:age=st.slider("Age: ",min_value=20,max_value=100,step=1)
     
@@ -45,7 +45,7 @@ if choice=="Heart Disease Predictor":
     
     caa,o=st.columns(2)
     with caa:ca=st.selectbox("No of major vessels(ca): ",(0,1,2,3,4))
-    if exang is 'Yes':exang=1
+    if exang=='Yes':exang=1
     else:exang=0
     with o:oldpeak=st.number_input("Oldpeak: ",min_value=0.0,step=0.1)
 
